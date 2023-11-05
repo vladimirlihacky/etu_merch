@@ -1,0 +1,18 @@
+services:
+    cms: 
+        image: "node:18"
+        command: sh -c "cd /app && npm run develop"
+        ports:
+            - 127.0.0.1:1337:1337
+        volumes:
+            - ./cms:/app
+        depends_on:
+            - meilisearch
+        
+    meilisearch:
+        image: "getmeili/meilisearch:latest"
+        command: ./meilisearch
+        ports: 
+            - "7700:7700"
+        volumes:
+            - ./meilisearch/data.ms:/data.ms
