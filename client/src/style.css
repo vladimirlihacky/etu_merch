@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TT Norms";
+  font-weight: 500;
+  font-size: 1em;
+}
+
+:root {
+  font-size: 20px;
+}
